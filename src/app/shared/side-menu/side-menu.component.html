@@ -1,33 +1,37 @@
-<section class="container">
+<section class="main-content">
+    <side-menu-submenu [visible]="visible"/>
 
-    <div class="row start">
-        <img src="{{!darkMode ? 'images/logoUnipres_color.png' : 'images/logoUnipres_W.png'}}" alt="">
-    </div>
+    <section class="container">
 
-    <div class="row center">
-
-    </div>
-
-    <div class="row end">
-
-        <p-button 
-            severity="secondary"
-            (onClick)="toggleDarkMode()" >
-            <span class="material-symbols-outlined">
-                {{ darkMode ? 'dark_mode' : 'light_mode' }}
-            </span>
-        </p-button>
-
-        <p-button 
-            severity="secondary"
-            (onClick)="toggleDarkMode()" >
-            <span class="material-symbols-outlined">
-                settings
-            </span>
-        </p-button>
-
-    </div>
+        <div class="row start">
+            <img src="{{!darkMode ? 'images/logoUnipres_color.png' : 'images/logoUnipres_W.png'}}" alt="">
+        </div>
     
-    <h6>V1.0.0</h6>
-</section>
+        <div class="row center">
+    
+        </div>
+    
+        <div class="row end">
+    
+            <p-button 
+                severity="secondary"
+                (onClick)="toggleDarkMode()" >
+                <span class="material-symbols-outlined">
+                    {{ darkMode ? 'dark_mode' : 'light_mode' }}
+                </span>
+            </p-button>
+    
+            <p-button 
+                (click)="visible = !visible"
+                severity="secondary" >
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </p-button>
+    
+        </div>
+        
+        <h6>V1.0.0</h6>
+    </section>
 
+</section>
