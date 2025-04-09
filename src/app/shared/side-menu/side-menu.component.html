@@ -1,0 +1,33 @@
+<section class="container">
+
+    <div class="row start">
+        <img src="{{!darkMode ? 'images/logoUnipres_color.png' : 'images/logoUnipres_W.png'}}" alt="">
+    </div>
+
+    <div class="row center">
+
+    </div>
+
+    <div class="row end">
+
+        <p-button 
+            severity="secondary"
+            (onClick)="toggleDarkMode()" >
+            <span class="material-symbols-outlined">
+                {{ darkMode ? 'dark_mode' : 'light_mode' }}
+            </span>
+        </p-button>
+
+        <p-button 
+            severity="secondary"
+            (onClick)="toggleDarkMode()" >
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+        </p-button>
+
+    </div>
+    
+    <h6>V1.0.0</h6>
+</section>
+

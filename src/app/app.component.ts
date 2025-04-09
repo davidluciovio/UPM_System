@@ -2,17 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { PrimeNG } from 'primeng/config';
-import { ButtonModule } from 'primeng/button';
-import { SelectModule } from 'primeng/select';
+import { SideMenuComponent } from "./shared/side-menu/side-menu.component";
 
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    ButtonModule,
-    SelectModule
-  ],
+    SideMenuComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -27,6 +25,6 @@ export class AppComponent implements OnInit{
   toggleDarkMode() {
     const element = document.querySelector('html');
     element!.classList.toggle('dark-mode');
-}
+  }
   title = 'upmSystemWeb';
 }
