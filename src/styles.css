@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'MyVariableFont';
+    src: url('../public/fonts/roboto.ttf') format('truetype');
+    font-weight: 100 900; /* Rango si es variable */
+    font-style: normal;
+  }
+
+  *{
+    font-family: 'MyVariableFont';
+  }
