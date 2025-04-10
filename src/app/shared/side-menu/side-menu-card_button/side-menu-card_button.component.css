@@ -1,3 +1,57 @@
 :host {
   display: block;
 }
+
+.container{
+  width: 100%;
+  height: 90px;
+
+  color: var(--p-button-secondary-color);
+
+  /* border-radius: 8px; */
+  transition: background-color 0.3s ease, transform 0.1s ease;
+
+  -webkit-user-select: none; /* Safari, iOS Safari */
+  -moz-user-select: none; /* Firefox (opcional, moderno ya soporta sin prefijo) */
+  -ms-user-select: none; /* IE/Edge antiguos */
+  user-select: none; /* Todos los demás */
+}
+
+.container:hover{
+  background-color: var(--p-button-secondary-background);
+  
+}
+
+.container.activo{
+  background-color: var(--p-button-secondary-background);
+}
+
+.container:focus {
+  outline: 3px solid var(--p-primary-color);
+}
+
+.container:active {
+  transform: scale(0.99);
+
+  background-color: var(--p-surface-300);
+  color: var(--p-surface-700);
+  /* color: var(--p-primary-contrast-color); */
+}
+
+
+.button-card{
+  width: 100%;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+
+  font-weight: 800;
+}
+.material-symbols-outlined{
+  font-size: 50px;
+}
