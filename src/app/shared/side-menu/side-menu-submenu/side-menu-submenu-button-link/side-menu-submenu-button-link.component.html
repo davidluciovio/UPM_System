@@ -1,0 +1,9 @@
+<a 
+    class="container" [routerLink]="[subModule().route]" 
+    routerLinkActive="active" 
+    (click)="print(subModule().route)">
+
+    <div class="indicator"></div>
+    <span>{{subModule().name}}</span>
+</a>
+

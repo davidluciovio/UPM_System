@@ -4,18 +4,20 @@
 
 .container{
   width: 110px;
-  height: 100vh;
+  /* width: 110px;
+  height: 100vh; */
 
 }
 
 .visible{
   width: 260px;
-  padding: 15px 0px 15px 110px;
+  height: 100vh;
+  padding: 30px 10px 15px 125px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: left;
+  justify-content: start;
 
   background-color: var(--p-button-secondary-background);
   /* border: 1px solid black; */
@@ -24,3 +26,7 @@
   transition: width 0.3s ease, transform 0.1s ease;
 
 }
+h4{
+  margin: 10px 0px;
+}
+

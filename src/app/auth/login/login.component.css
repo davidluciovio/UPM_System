@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+.container{
+  height: 480px;
+  width: 640px;
+
+  display: flex;
+  flex-direction: row;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 12px var(--p-button-secondary-background);
+
+  background-color: var(--p-primary-contrast-color);
+}
+
+.left-card{
+  width: 40%;
+  height: 100%;
+
+  border-radius: 20px;
+  background-color: var(--p-primary-color);
+}
+
+.rigth-card{
+  width: 60%;
+  height: 100%;
+
+  padding: 80px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border-radius: 20px;
+  background-color: var(--p-primary-contrast-color);
+}
+
+h2{
+  color: var(--p-primary-color);
+}
+
+p-inputgroup{
+  margin: 20px 0px;
+}

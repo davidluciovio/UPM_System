@@ -1,5 +1,6 @@
-import { Component, Input, input, signal, WritableSignal } from '@angular/core';
+import { Component, Input, input, InputSignal, signal, WritableSignal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { IModule } from '../../../upm/interfaces/module.interface';
 
 @Component({
   selector: 'side-menu-card-button',
@@ -10,8 +11,7 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './side-menu-card_button.component.css'
 })
 export class SideMenuCardButtonComponent { 
-  icon = input('settings');
-  label = input('label');
+  Module: InputSignal<IModule> = input({} as IModule);
 
   activo: boolean = false;
 

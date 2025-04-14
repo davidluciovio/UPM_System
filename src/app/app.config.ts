@@ -8,6 +8,8 @@ import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
 
 import MyPreset from './mypreset';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { tokenInterceptor } from './auth/token.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -24,5 +26,7 @@ export const appConfig: ApplicationConfig = {
               cssLayer: false
           }
         }
-    })]
+    }),
+    provideHttpClient(withInterceptors([tokenInterceptor]))
+  ]
 };

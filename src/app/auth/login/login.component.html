@@ -1,0 +1,42 @@
+<section class="container">
+
+    <div class="left-card">
+
+    </div>
+
+    <div class="rigth-card">
+       <h2>INICIAR SESIÓN</h2>
+
+       <form [formGroup]="loginForm" (ngSubmit)="submit()">
+          <p-iconfield>
+            <p-inputicon class="material-symbols-outlined" >person</p-inputicon>
+            <input type="text" pInputText placeholder="Nómina" formControlName="email"/>
+          </p-iconfield>
+
+          <p-iconfield>
+            <p-inputicon class="material-symbols-outlined" >password</p-inputicon>
+            <input type="password" pInputText placeholder="Contraseña" formControlName="password" />
+          </p-iconfield>
+
+          <p-button type="submit" label="Log In" />
+       </form>
+    
+    </div>
+</section>
+
+
+
+
+
+
+<!-- <div class="login-container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>Email:</label>
+      <input type="email" formControlName="email" aria-label="Email"/>
+  
+      <label>Password:</label>
+      <input type="password" formControlName="password" aria-label="Email"/>
+  
+      <button type="submit">Login</button>
+    </form>
+  </div> -->

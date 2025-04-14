@@ -1,5 +1,5 @@
 <section class="main-content">
-    <side-menu-submenu [visible]="visible"/>
+    <side-menu-submenu [Visible]="visible" [Module]="module()"/>
 
     <section class="container">
 
@@ -8,11 +8,11 @@
         </div>
     
         <div class="row center">
-            <ul>
-                <li>
-                    <side-menu-card-button/>
-                </li>
-            </ul>
+            @for (module of modules(); track $index){
+                <side-menu-card-button 
+                    (click)="SendModule(module)"
+                    [Module]="module"/>
+            }  
         </div>
     
         <div class="row end">
@@ -26,13 +26,16 @@
             </p-button>
     
             <p-button 
-                (click)="visible = !visible"
+                (click)="op.toggle($event)"
                 severity="secondary" >
                 <span class="material-symbols-outlined">
                     settings
                 </span>
             </p-button>
-    
+            
+            <p-popover #op>
+                <side-menu-settings></side-menu-settings>
+            </p-popover>
         </div>
         
         <h6>V1.0.0</h6>

@@ -1,3 +1,7 @@
-<section class="container {{visible() ? 'visible' : ''}}">
-d
+<section class="container {{Visible() ? 'visible' : ''}}">
+    <h4>{{Module().name}}</h4>
+    
+    @for (submodule of Module().subModules; track $index) {
+        <side-menu-submenu-button-link [subModule]="submodule"/>
+    }
 </section>
